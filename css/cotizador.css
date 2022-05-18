@@ -1,0 +1,80 @@
+
+body{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h1{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+p{
+  font-size: 1.2rem;
+}
+
+.app{
+  padding: 7% 4%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+}
+.app-container {
+  padding: 2rem;
+  border: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  
+}
+
+.d-flex {
+  display: flex;
+}
+
+.m-1 {
+  margin: 8px;
+}
+
+.act-btn {
+  border-radius: 100% !important;
+  height: 32px;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  padding: 24px;
+  align-items: center;
+  border: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 15px 0px;
+  border-radius: 12px;
+}
+.card:hover{box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all ease-in-out 800ms;
+}
+
+.btn-torniweb {
+  padding: 8px;
+  font-size: 0.8rem;
+  max-width: 120px;
+  border-radius: 8px;
+  background: #565D99;
+  color: white;
+  border: none;
+}
+.card-list {
+  display: flex !important;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+}
