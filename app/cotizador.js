@@ -3,7 +3,7 @@ const cartContainer = document.querySelector('.cart-container')
 const cotizadorBtn = document.querySelector('.cotizadorBtn')
 const confirmModal = document.querySelector('#form-modal')
 const formContact =  document.querySelector('#contact-form')
-const BASE_URL = 'http://josue.ngrok.io/api/client'
+const BASE_URL = 'https://josue.ngrok.io/api/client'
 const S3_URL = 'https://torniweb.s3.amazonaws.com/'
 const ERROR_CODES = {
   '1' : 'Ingresa un número válido',
