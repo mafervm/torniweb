@@ -50,6 +50,7 @@ p{
   justify-content: space-between;
 }
 
+
 .card {
   display: flex;
   padding: 24px;
@@ -71,10 +72,51 @@ p{
   color: white;
   border: none;
 }
+
+.btn-torniweb--success {
+  background: rgb(61, 148, 76);
+  width: 10rem;
+}
+
 .card-list {
   display: flex !important;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 1rem;
+}
 
+#form-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.form-modal__content {
+  display: block;
+  background-color: #fefefe;
+  border-radius: 12px;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close-modal {
+  text-align: right;
+  width: 100%;
+  float: right;
+  cursor: pointer;
+}
+
+#contact-form {
+  
 }

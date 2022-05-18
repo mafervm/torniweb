@@ -40,13 +40,37 @@
   <div class="app">
     <div class="app-container app__list">
       <h1>Cotizador</h1>
-      <div class="list-container"></div>
+      <div class="list-container">Cargando...</div>
     </div>
     <div class=" app-container app__preview">
       <h1>Resumen</h1>
       <div class="cart-container"></div>
-      <button class="cotizadorBtn" style="background:green;">COTIZAR</button>
+      <button class="mt-4 cotizadorBtn btn-torniweb btn-torniweb--success">COTIZAR</button>
 
+    </div>
+  </div>
+  <div id="form-modal">
+    <div class="form-modal__content"> 
+      <div>
+        <span class="close-modal" onclick="closeModal()">X</span>
+      </div>
+      <h1>Datos de contacto</h1>
+      <form id="contact-form">
+        <div>
+          <label type="text" for="name">Ingresa tu nombre (Físico o moral)</label>
+        <input name="name"/>
+        </div>
+        <div>
+          <label for="phone">Ingresa tu teléfono:</label>
+         <input type="tel" id="phone" name="phone">
+        </div>
+        <div>
+          <label for="email">Ingresa tu correo electrónico:</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <button type="submit" class="mt-4 cotizadorBtn btn-torniweb btn-torniweb--success">Enviar cotización</button>
+
+      </form>
     </div>
   </div>
   <script src="./app/cotizador.js"></script>
