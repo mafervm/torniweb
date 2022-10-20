@@ -132,7 +132,7 @@ function closeModal() {
   confirmModal.style.display = 'none'
 
 }
- 
+
 
 //API DE GOOGLE
 function onSignIn(googleUser) {

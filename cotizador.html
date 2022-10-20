@@ -11,9 +11,6 @@
   <!--GOOGLE API OAUTH-->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta name="google-signin-client_id" content="437950640578-hjjg2tnqilrshrhpjcdjdcglrk8ppf5k.apps.googleusercontent.com">
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-  
-    <a href="#" onclick="signOut();">Sign out</a>
   <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -89,5 +86,7 @@
     </div>
   </div>
   <script src="./app/cotizador.js"></script>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <a href="#" onclick="signOut();">Sign out</a>
 </body>
 </html>
