@@ -79,6 +79,12 @@
   </div>
   <div id="my-signin2"></div>
   <script>
+//     window.gapi.load('client:auth2', () => {
+//         window.gapi.client.init({
+//             clientId: '437950640578-hjjg2tnqilrshrhpjcdjdcglrk8ppf5k.apps.googleusercontent.com',
+//             plugin_name: "chat"
+//         })
+// })
     function onSuccess(googleUser) {
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
     }
