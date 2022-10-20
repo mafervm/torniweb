@@ -132,8 +132,11 @@ function closeModal() {
   confirmModal.style.display = 'none'
 
 }
+ 
 
+//API DE GOOGLE
 function onSignIn(googleUser) {
+  console.log('Hola')
   var id_token = googleUser.getAuthResponse().id_token;
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'https://josue.ngrok.io');
