@@ -1,155 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="This is a web page for Tornillos Villarreal S.A de C.V in Mexico Tamaulipas">
-  <link rel="icon" href="images/logo_circular.png">
-  <!--ADDING BOOTSTRAP-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
-  <!--GOOGLE API OAUTH-->
-  <script src="https://apis.google.com/js/api:client.js"></script>
-  <script>
-    var googleUser = {};
-    var startApp = function() {
-      gapi.load('auth2', function(){
-        // Retrieve the singleton for the GoogleAuth library and set up the client.
-        auth2 = gapi.auth2.init({
-          client_id: '437950640578-3d2vs0uo765kdu5jfbjimofvet0n0dpp.apps.googleusercontent.com',
-          cookiepolicy: 'single_host_origin',
-          plugin_name: 'FUCK_GOOGLE'
-          // Request scopes in addition to 'profile' and 'email'
-          //scope: 'additional_scope'
-        });
-        attachSignin(document.getElementById('customBtn'));
-      });
-    };
-  
-    function attachSignin(element) {
-      console.log(element.id);
-      auth2.attachClickHandler(element, {},
-          function(googleUser) {
-            document.getElementById('name').innerText = "Signed in: " +
-                googleUser.getBasicProfile().getName();
-          }, function(error) {
-            alert(JSON.stringify(error, undefined, 2));
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="This is a web page for Tornillos Villarreal S.A de C.V in Mexico Tamaulipas"
+    />
+    <link rel="icon" href="images/logo_circular.png" />
+    <!--ADDING BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--GOOGLE API OAUTH-->
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script>
+      var googleUser = {};
+      var startApp = function () {
+        gapi.load("auth2", function () {
+          // Retrieve the singleton for the GoogleAuth library and set up the client.
+          auth2 = gapi.auth2.init({
+            client_id:
+              "437950640578-3d2vs0uo765kdu5jfbjimofvet0n0dpp.apps.googleusercontent.com",
+            cookiepolicy: "single_host_origin",
+            plugin_name: "FUCK_GOOGLE",
+            // Request scopes in addition to 'profile' and 'email'
+            //scope: 'additional_scope'
           });
-    }
+          attachSignin(document.getElementById("customBtn"));
+        });
+      };
+
+      function attachSignin(element) {
+        console.log(element.id);
+        auth2.attachClickHandler(
+          element,
+          {},
+          function (googleUser) {
+            document.getElementById("name").innerText =
+              "Signed in: " + googleUser.getBasicProfile().getName();
+          },
+          function (error) {
+            alert(JSON.stringify(error, undefined, 2));
+          }
+        );
+      }
     </script>
-      <style type="text/css">
-        #customBtn {
-          display: inline-block;
-          background: white;
-          color: #444;
-          width: 190px;
-          border-radius: 5px;
-          border: thin solid #888;
-          box-shadow: 1px 1px 1px grey;
-          white-space: nowrap;
-        }
-        #customBtn:hover {
-          cursor: pointer;
-        }
-        span.label {
-          font-family: serif;
-          font-weight: normal;
-        }
-        span.icon {
-          background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
-          display: inline-block;
-          vertical-align: middle;
-          width: 42px;
-          height: 42px;
-        }
-        span.buttonText {
-          display: inline-block;
-          vertical-align: middle;
-          padding-left: 42px;
-          padding-right: 42px;
-          font-size: 14px;
-          font-weight: bold;
-          /* Use the Roboto font that is loaded in the <head> */
-          font-family: 'Roboto', sans-serif;
-        }
-      </style>
-  <!--jQuery first, then Popper.js, then Bootstrap JS-->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+    <style type="text/css">
+      #customBtn {
+        display: inline-block;
+        background: white;
+        color: #444;
+        width: 190px;
+        border-radius: 5px;
+        border: thin solid #888;
+        box-shadow: 1px 1px 1px grey;
+        white-space: nowrap;
+        margin-bottom: 1rem;
+      }
+      #customBtn:hover {
+        cursor: pointer;
+      }
+      span.icon {
+        background: url("./images/g-normal.png") transparent 5px 50% no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+        width: 42px;
+        height: 42px;
+      }
+      span.buttonText {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 42px;
+        padding-right: 42px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    </style>
+    <!--jQuery first, then Popper.js, then Bootstrap JS-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
 
-  <!--GOOGLE FONTS-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
-  <!--ICONS API-->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  <!--CSS STYLE-->
-  <link rel="stylesheet" href="css/cotizador.css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--ICONS API-->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
+    <!--CSS STYLE-->
+    <link rel="stylesheet" href="css/cotizador.css" />
 
-
-  <title>TORNIWEB</title>
-</head>
-<body>
-  <h1>
-    <a href="./index.html">
-      ←Regresar
-    </a>
-  </h1>
-  <div class="app">
-    <div class="app-container app__list">
-      <h1>Cotizador</h1>
-      <div class="list-container">Cargando...</div>
-    </div>
-    <div class=" app-container app__preview">
-      <h1>Resumen</h1>
-      <div class="cart-container"></div>
-      <button class="mt-4 cotizadorBtn btn-torniweb btn-torniweb--success">COTIZAR</button>
-
-    </div>
-  </div>
-  <div id="form-modal">
-    <div class="form-modal__content"> 
-      <div>
-        <span class="close-modal" onclick="closeModal()">X</span>
+    <title>TORNIWEB</title>
+  </head>
+  <body>
+    <h1>
+      <a href="./index.html"> ←Regresar </a>
+    </h1>
+    <div class="app">
+      <div class="app-container app__list">
+        <h1>Cotizador</h1>
+        <div class="list-container">Cargando...</div>
       </div>
-      <h1>Datos de contacto</h1>
-      <form id="contact-form">
-        <div>
-          <label type="text" for="name">Ingresa tu nombre (Físico o moral)</label>
-        <input name="name"/>
-        </div>
-        <div>
-          <label for="phone">Ingresa tu teléfono:</label>
-         <input type="tel" id="phone" name="phone">
-        </div>
-        <div>
-          <label for="email">Ingresa tu correo electrónico:</label>
-          <input type="email" id="email" name="email">
-        </div>
-        <button type="submit" class="mt-4 cotizadorBtn btn-torniweb btn-torniweb--success">Enviar cotización</button>
-
-      </form>
+      <div class="app-container app__preview">
+        <h1>Resumen</h1>
+        <div class="cart-container"></div>
+        <button class="mt-4 cotizadorBtn btn-torniweb btn-torniweb--success">
+          COTIZAR
+        </button>
+      </div>
     </div>
-  </div>
- <!-- In the callback, you would hide the gSignInWrapper element on a
+    <div id="form-modal">
+      <div class="form-modal__content">
+        <div>
+          <span class="close-modal" onclick="closeModal()">X</span>
+        </div>
+        <h1>Datos de contacto</h1>
+        <!-- In the callback, you would hide the gSignInWrapper element on a
   successful sign in -->
-  <div id="gSignInWrapper">
-    <span class="label">Sign in with:</span>
-    <div id="customBtn" class="customGPlusSignIn">
-      <span class="icon"></span>
-      <span class="buttonText">Google</span>
+        <div id="gSignInWrapper">
+          <span class="label">Llenar formulario con:</span>
+          <div id="customBtn" class="customGPlusSignIn">
+            <span class="icon"></span>
+            <span class="buttonText">Google</span>
+          </div>
+        </div>
+        <form id="contact-form">
+          <div>
+            <label type="text" for="name"
+              >Ingresa tu nombre (Físico o moral)</label
+            >
+            <input name="name" />
+          </div>
+          <div>
+            <label for="phone">Ingresa tu teléfono:</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div>
+            <label for="email">Ingresa tu correo electrónico:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <button
+            type="submit"
+            class="mt-4 cotizadorBtn btn-torniweb btn-torniweb--success"
+          >
+            Enviar cotización
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-  <div id="name"></div>
-  <script>startApp();</script>
-  <script src="./app/cotizador.js"></script>
-
-</body>
+    <div id="name"></div>
+    <script>
+      startApp();
+    </script>
+    <script src="./app/cotizador.js"></script>
+  </body>
 </html>
