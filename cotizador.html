@@ -48,7 +48,7 @@
             form.elements['name'].value = name
             form.elements['email'].value = email
 
-            fetch('https://josue.ngrok.io/api/client/attemptSignIn',{
+            fetch(`https://josue.ngrok.io/api/client/attemptSignIn/${id_token}`,{
               method: 'POST',
               mode: 'cors',
               headers: {
@@ -60,7 +60,7 @@
             }).then(res => {
               console.log('res', res)
             }).catch(err => {
-              console.warn('Erro validating user token ID')
+              console.warn('Error validating user token ID')
             })
           },
           function (error) {
