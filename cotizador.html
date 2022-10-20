@@ -40,13 +40,28 @@
           element,
           {},
           function (googleUser) {
+            const id_token = googleUser.getAuthResponse().id_token;
             const profile = googleUser.getBasicProfile()
             const email = profile.getEmail()
             const name = profile.getName()
             const form = document.getElementById('contact-form')
             form.elements['name'].value = name
             form.elements['email'].value = email
-            
+
+            fetch('https://josue.ngrok.io/api/client/attemptSignIn',{
+              method: 'POST',
+              mode: 'cors',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+              },
+              body: {
+                idToken: id_token
+              }
+            }).then(res => {
+              console.log('res', res)
+            }).catch(err => {
+              console.warn('Erro validating user token ID')
+            })
           },
           function (error) {
             alert(JSON.stringify(error, undefined, 2));
