@@ -134,18 +134,7 @@ function closeModal() {
 }
 
 
-//API DE GOOGLE
-function onSignIn(googleUser) {
-  console.log('Hola')
-  var id_token = googleUser.getAuthResponse().id_token;
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://josue.ngrok.io');
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  xhr.onload = function() {
-  console.log('Signed in as: ' + xhr.responseText);
-  };
-  xhr.send('idtoken=' + id_token);
-}
+
 
 
 formContact.addEventListener('submit', async e => {
